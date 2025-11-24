@@ -13,7 +13,7 @@ const AgendaPage: React.FC = () => {
   const { t } = useLanguage();
 
   const allTasks = useMemo(() => {
-    return Object.values(tasks).flat().sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    return (Object.values(tasks).flat() as MaintenanceTask[]).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   }, [tasks]);
 
   const filteredTasks = useMemo(() => {

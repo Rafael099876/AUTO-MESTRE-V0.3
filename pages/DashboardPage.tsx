@@ -13,7 +13,7 @@ const DashboardPage: React.FC = () => {
   const [showTaskForm, setShowTaskForm] = useState<string | null>(null);
   const { t } = useLanguage();
 
-  const allTasks = Object.values(tasks).flat().sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  const allTasks = (Object.values(tasks).flat() as MaintenanceTask[]).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   const today = new Date().toISOString().split('T')[0];
 
   return (

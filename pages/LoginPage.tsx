@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import { WrenchIcon } from '../components/common/Icons';
+import { AppLogo } from '../components/common/Icons';
 import { useLanguage } from '../context/LanguageContext';
 
 const LoginPage: React.FC = () => {
@@ -27,7 +27,7 @@ const LoginPage: React.FC = () => {
     <div className="min-h-screen flex items-center justify-center bg-light-bg dark:bg-dark-bg p-4 animate-fadeIn">
       <div className="w-full max-w-md bg-light-card dark:bg-dark-card rounded-xl shadow-2xl p-8 border border-light-border dark:border-dark-border">
         <div className="text-center mb-8">
-            <WrenchIcon className="w-16 h-16 text-primary mx-auto mb-4" />
+            <AppLogo className="w-16 h-16 text-primary mx-auto mb-4" />
             <h1 className="text-3xl font-bold text-light-text dark:text-dark-text">{t('loginTitle')}</h1>
             <p className="text-gray-500 dark:text-gray-400">{t('loginSubtitle')}</p>
         </div>

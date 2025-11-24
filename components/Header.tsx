@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
 import { useLanguage } from '../context/LanguageContext';
-import { SunIcon, MoonIcon, LogoutIcon, CalendarIcon, WrenchIcon } from './common/Icons';
+import { SunIcon, MoonIcon, LogoutIcon, CalendarIcon, AppLogo } from './common/Icons';
 
 interface HeaderProps {
     title: string;
@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
     <header className="bg-light-card dark:bg-dark-card shadow-md sticky top-0 z-10 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <WrenchIcon className="w-8 h-8 text-primary" />
+          <AppLogo className="w-8 h-8 text-primary" />
           <h1 className="text-2xl font-bold text-light-text dark:text-dark-text">{title}</h1>
         </div>
         <div className="flex items-center gap-4">
